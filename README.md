@@ -1,7 +1,7 @@
 - 👋 Hi, I’m @mariemAZ
 - 👀 I’m interested in data science
 - 🌱 I’m currently learning it
-- 💞️ I’m looking to collaborate on project for beginners in this field
+- 💞️ I’m looking to collaborate on projects for beginners in this field
 - 📫 for DM : mariemazouigui@gmail.com
 
 <!---
