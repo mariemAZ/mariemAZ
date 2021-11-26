@@ -5,7 +5,7 @@ import pickle
 app = Flask(__name__)
 model = pickle.load(open('modelreg.pkl', 'rb'))
 
-@app.route('/houseprice')
+@app.route('/')
 def home():
     return render_template('index.html')
 
