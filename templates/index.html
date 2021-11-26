@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>ML DEployment Workshop -v1</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  
+</head>
+
+<body style="background: #100;">
+<center>
+ <div class="login">
+	<h1>House Price Estimation</h1>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post">
+		<br>
+    	<input type="text" name="Over all Quality" placeholder="Over all Quality" required="required" />
+        <br>
+		<input type="text" name="Original construction date" placeholder="Original construction date" required="required" />
+		<br>
+		<input type="text" name="Remodel date" placeholder="Remodel date" required="required" />
+		<br>
+		<input type="text" name="Total square feet of basement area" placeholder="Total square feet of basement area" required="required" />
+		<br>
+		<input type="text" name="First Floor square feet" placeholder="First Floor square feet" required="required" />
+		<br>
+		<input type="text" name="Ground living area square feet" placeholder="Ground living area square feet" required="required" />
+		<br>
+		<input type="text" name="Basement full bathrooms" placeholder="Basement full bathrooms" required="required" />
+		<br>
+		<input type="text" name="Total rooms above grade" placeholder="Total rooms above grade" required="required" />
+		<br>
+		<input type="text" name="Number of fireplaces" placeholder="Number of fireplaces" required="required" />
+		<br>
+		<input type="text" name="Year garage was built" placeholder="Year garage was built" required="required" />
+		<br>
+		<input type="text" name="Size of garage in car capacity" placeholder="Size of garage in car capacity" required="required" />
+		<br>
+		<input type="text" name="Size of garage in square feet" placeholder="Size of garage in square feet" required="required" />
+		<br>
+        <button type="submit" class="btn btn-primary btn-block btn-large">Calculate the House Price ($)</button>
+    </form>
+
+   <br>
+   {{ prediction_text }}
+	  
+ </div>
+
+</center>
+</body>
+</html>
